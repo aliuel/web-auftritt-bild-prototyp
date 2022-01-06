@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        /* @apply bg-dark-green */
+    }
+
+    #canvas > h1 {
+        @apply text-[12vh] text-rose-300 uppercase        
+    }
+
+    #canvas > h2 {
+        @apply text-[3vh] text-rose-200 text-right
+    }
+
+    #header h1 {
+        @apply uppercase
+    }
+
+    @media (max-width: 315px) {
+        #canvas > h1 {
+            @apply text-[10vh] mt-[1.7vh];
+        }
+
+        #canvas > h2 {
+            @apply text-[2.5vh];
+        }
+    }
+
+    @media (min-width: 1025px) {
+        #canvas {
+            @apply w-[450px] px-5;
+        }
+
+        #canvas > h1 {
+            @apply text-[20vh] mt-[-6vh] mr-[-80px];
+        }
+
+        #main {
+            @apply pl-[450px]; /* same on line 26 */
+        }
+
+        #button {
+            @apply hidden
+        }
+
+        #header > h1 {
+            /* @apply text-[3.5vw]; */
+        }
+
+        #header {
+            @apply ml-6
+        }
+
+        #wrapper {
+            @apply pl-28
+        }
+    }
+
+    @media (min-width: 1400px) {
+        #canvas {
+            @apply w-[600px];
+        }
+
+        #main {
+            @apply pl-[600px];
+        }
+    }
+}
